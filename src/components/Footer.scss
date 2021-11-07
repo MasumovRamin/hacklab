@@ -1,0 +1,154 @@
+@import "../formul";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+.footer{
+  @include size;
+  background-color: #1B1B1B;
+  background-blend-mode: multiply; 
+  .main{
+    @include displayflex($ai:flex-start);
+    color: #FFFFFF;
+    @include media ($d:500px, $di:flex, $fd: column)
+  }
+  .child-one{
+    @include size($w: 40%, $h: 395px);
+    @include font($fs: 22px, $fm: "Montserrat", $ta: left, $lh: 49px);
+    border-right: 1px solid #E0E0E0;
+    @include mp($p: 50px 50px 10px 50px);
+    @include media($d:1000px, $fs:20px, $p: 40px);
+    @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px, $h: 265px);
+    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 250px, $bb:1px solid #fff);
+
+    .line-more{
+      @include font($fs: 22px, $fm: "Montserrat", $ta: left, $lh: 69px);
+      @include mp($m: -5px 0px 0px 0px);
+      @include media($d:1000px, $fs:20px);
+      @include media($d:750px, $fs:14px, $lh: 29px);
+      @include media($d:500px, $fs:16px, $lh: 35px);
+    }
+    .line-less{
+      @include font($fs: 22px, $fm: "Montserrat", $ta: left, $lh: 30px);
+      @include mp($m: 0px 0px 10px 0px);
+      @include media($d:1000px, $fs:20px);
+      @include media($d:750px, $fs:14px, $lh: 29px);
+      @include media($d:500px, $fs:16px, $lh: 35px);
+      // @include media($d:410px, $lh: 18px);
+    }
+    img{
+      @include size($w:301px,$h:67px);
+      @include media($d:1000px, $w:250px, $h:55px);
+      @include media($d:750px, $w:170px, $h:35px);
+      @include media($d:500px, $w:170px, $h:35px);
+    }
+    .right{
+      @include font($fs: 16px, $fm: "Montserrat", $ta: left,  $fw: 200);
+      @include mp($m: 42px 0px 0px 0px);
+      @include media($d:1000px, $fs:14px);
+      @include media($d:750px, $fs:10px, $m: 30px 0px 0px 0px);
+      @include media($d:500px, $fs:12px, $m: 0px 0px 0px 0px, $lh: 15px);
+      display: block;
+    }
+  }
+  .child-two{
+    @include size($w: 20%);
+    @include displayflex($fd: column, $ai: flex-start, $jc: flex-start);
+    @include font($fs: 22px, $fm: "Montserrat", $ta: left,  $lh: 49px, $fw:400);
+    @include mp($p: 45px 50px 0px 50px);
+    @include media($d:1000px, $fs:20px, $p: 40px);
+    @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px);
+    // @include media($d:500px, $fs:10px, $p: 15px, $lh: 20px);
+    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 160px, $bb:1px solid #fff);
+    .facebook, .instagram, .linkedin {
+      z-index: 5;
+      &:hover{
+        @include font($fs: 22px, $fm: "Montserrat", $ta: left,  $lh: 49px, $fw:600);
+        @include media($d:750px, $fs:14px, $lh: 29px, $fw:600);
+        @include media($d:500px, $fs:16px, $lh: 35px,  $fw:400);
+      }
+    }
+  }
+  .child-three{
+    z-index: 5;
+    @include size($w: 40%,$h: 395px);
+    @include font($fs: 22px, $fm: "Montserrat", $ta: left,  $lh: 49px);
+    @include mp($p: 45px 50px 11px 50px);
+    border-left: 1px solid #E0E0E0;
+    @include media($d:1000px, $fs:20px, $p: 40px);
+    @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px, $h: 265px);
+    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 250px, $bb:1px solid #fff);
+    .home-hov, .layiheler, .faq-hover{
+      &:hover{
+        @include font($fs: 22px, $fm: "Montserrat", $ta: left,  $lh: 49px, $fw:600); 
+        @include media($d:750px, $fs:14px, $lh: 29px);
+        @include media($d:600px, $fs:10px, $lh: 20px);    
+        @include media($d:500px, $fs:16px, $lh: 20px);  
+      }
+    }
+    .two-two{
+      @include displayflex($jc: space-between);
+      .up{
+        @include font($fs: 18px, $fm: "Montserrat", $ta: left, $c: #FFFFFF);
+        @include media($d:1000px, $fs:16px);
+        @include media($d:750px, $fs:12px);
+        @include media($d:500px, $fs:14px);
+        text-decoration: none;
+        &:hover{
+          @include font($fs: 18px, $fm: "Montserrat", $ta: left, $fw:600);  
+          @include media($d:750px, $fs:12px, $fw:600);
+          @include media($d:500px, $fs:14px, $fw:400);   
+        }
+      }
+    }
+    .search-icon{
+      @include mp($m: 50px 0px 0px 0px);
+      @include media($d:500px, $m: 18px 0px 0px 0px);
+      position: relative; 
+      // .fa-search{
+      //   position: absolute;
+      //   right:20px;
+      //   top:12px;
+      //  //  @include media($d:500px, $m: -2px -20px 0px 0px);
+      //   @include media($d:750px, $m: -5px -10px 0px 0px);
+      //  }
+      .fa-search1{
+       position: absolute;
+       right:20px;
+       top:4px;
+      //  @include media($d:500px, $m: -2px -20px 0px 0px);
+       @include media($d:900px, $m: 0px 0px 0px 0px);
+       @include media($d:750px, $m: 0px 0px 0px 0px);
+       @include media($d:500px, $m: 0px 0px 0px 0px);
+       img{
+         @include mp($m: 105px 0px 0px 0px);
+        width: 30px;
+        height: 30px;
+        filter:invert(100%);
+        @include media($d:900px, $w: 18px, $h: 18px,$m:112px -10px 0px 0px);
+        @include media($d:750px, $w: 18px, $h: 18px,$m: 42px -10px 0px 0px);
+        @include media($d:500px, $w: 15px, $h: 15px, $m: 25px -10px 0px 0px);
+       }
+      }
+      input{
+        @include size($h: 48px);
+        @include media($d:900px, $h:30px, $fs: 14px, $p: 0px 40px 0px 10px, $m: 110px 0px 0px 0px);
+        @include media($d:750px, $h:30px, $fs: 14px, $p: 0px 40px 0px 10px, $m: 40px 0px 0px 0px);
+        @include media($d:500px, $h:35px, $fs: 14px, $p: 0px 40px 0px 10px, $m: 20px 0px 0px 0px);
+        @include font($fs: 20px, $fm: "Montserrat", $ta: left, $c: #FFFFFF);
+        @include mp($p: 20px 55px 20px 10px);
+        background: #1B1B1B;
+        border: 1px solid #FFFFFF;
+        position: absolute; 
+        @include mp($m: 100px 0px 0px 0px);
+      }
+    }
+    .end{
+      @include font($fs: 16px, $fm: "Montserrat", $ta: right, $c: #FFFFFF,  $fw: 200);
+      @include media($d:900px, $fs:14px, $lh: 29px, $m: 200px 0px 0px 0px);
+      @include media($d:750px, $fs:10px, $lh: 29px, $m: 135px 0px 0px 0px);
+      @include media($d:500px, $fs:12px, $lh: 25px, $m: 80px 0px 0px 0px);
+      @include mp($m: 205px 0px 0px 0px);
+    }
+  }
+}

@@ -1,0 +1,70 @@
+@import "formul";
+
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url("https://i.ibb.co/2dB4Rkj/bg1.gif");  
+  background-size: 95%;  // 5000px lik sekildi 95% le gorsensin
+  background-color: #E0E0E0;
+  background-blend-mode: multiply;
+  cursor: context-menu;
+}
+
+.cursor {
+  pointer-events: none;
+  box-sizing: border-box;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background:transparent;
+  border:1px solid #131313;
+  border-radius: 50%;
+  text-align: center;
+  display: block;
+  transition: all 0.15s;
+  z-index:1;
+  transform: translate(-50%,-50%);
+ 
+
+}
+
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: transparent; /*back color */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #353835; /*main color */
+  border-radius: 10px;
+}
+
+
+// ::-webkit-scrollbar-track:hover{
+//   background: yellow; 
+// }
+
+// ::-webkit-scrollbar-thumb:hover {
+//   background: #b30000;  /*main color hover */
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

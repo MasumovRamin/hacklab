@@ -1,50 +1,111 @@
-import React, { Component } from "react"
-import logo from "./logo.svg"
-import "./App.css"
+import "./styles.scss";
+import { useEffect } from "react";
+import { connect } from "react-redux";
+import $ from "jquery";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Section1 from "./components/Section1";
+import Section2 from "./components/Section2";
+import Section3 from "./components/Section3";
+import Section3b from "./components/Section3b";
+import Section4 from "./components/Section4";
+import Footer from "./components/Footer";
+import Faq from "./pages/Faq";
+import Project from "./pages/Project";
 
-class LambdaDemo extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { loading: false, msg: null }
-  }
+function App({ text1 = [], text2 }) {
+  useEffect(() => {
+    $(".div1").bind("mousemove", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid white");
+      });
+    });
+    $(".div1").bind("mouseleave", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid black");
+      });
+    });
+    $(".div1").bind("mouseenter", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid white");
+      });
+    });
 
-  handleClick = api => e => {
-    e.preventDefault()
+    $(".footer").bind("mousemove", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid white");
+      });
+    });
+    $(".footer").bind("mouseleave", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid black");
+      });
+    });
+    $(".footer").bind("mouseenter", function (e) {
+      $("html").bind("mousemove", function (e) {
+        $(".cursor").css("border", "1px solid white");
+      });
+    });
 
-    this.setState({ loading: true })
-    fetch("/.netlify/functions/" + api)
-      .then(response => response.json())
-      .then(json => this.setState({ loading: false, msg: json.msg }))
-  }
+    $("html").bind("mousemove", function (e) {
+      $(".cursor").css({
+        left: e.pageX,
+        top: e.pageY
+      });
+      // $(".cursor").css("display", "block");
+      $("body").css("overflow-x", "hidden");
+    });
 
-  render() {
-    const { loading, msg } = this.state
+    $("html").on("mouseleave", function (e) {
+      $(".cursor").css("display", "none");
+    });
 
-    return (
-      <p>
-        <button onClick={this.handleClick("hello")}>{loading ? "Loading..." : "Call Lambda"}</button>
-        <button onClick={this.handleClick("async-dadjoke")}>{loading ? "Loading..." : "Call Async Lambda"}</button>
-        <br />
-        <span>{msg}</span>
-      </p>
-    )
-  }
+    $("html").on("mouseenter", function (e) {
+      $(".cursor").css("display", "block");
+    });
+
+    $("html").on("touchcancel", function (e) {
+      $(".cursor").css("display", "none");
+    });
+
+    $("html").on("touchmove", function (e) {
+      $(".cursor").css("display", "none");
+    });
+
+    $("html").on("touchstart", function (e) {
+      $(".cursor").css("display", "none");
+    });
+  });
+
+  return (
+    <BrowserRouter>
+      <>
+        <Switch>
+          <Route exact path="/">
+            <Section1 />
+            <Section2 />
+            <Section3 />
+            <Section3b />
+            <Section4 />
+            <Footer />
+          </Route>
+          <Route exact path="/faq" component={Faq} />
+          <Route exact path="/project" component={Project} />
+        </Switch>
+
+        <div class="cursor"></div>
+        {/* {text1.map((tex) => {
+        // return <h2>{tex.text}</h2>;
+      })} */}
+      </>
+    </BrowserRouter>
+  );
 }
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <LambdaDemo />
-        </header>
-      </div>
-    )
-  }
-}
+const mapStateToProps = (state, ownProps) => {
+  return {
+    text1: state.text1,
+    text2: state.text2
+  };
+};
 
-export default App
+export default connect(mapStateToProps)(App);

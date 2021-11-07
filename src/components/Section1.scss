@@ -1,0 +1,35 @@
+@import "../formul";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.Section1{
+  // @include size1($h:558px,$vw:8)
+  @include size;
+  height: calc(500.72px + 8vw);
+  .gif{
+    background-color: transparent;
+    img {
+      @include size;
+      height: calc(500.72px + 8vw);
+      mix-blend-mode: difference;
+      object-fit: cover;
+    }
+  }
+  .write{
+    position:absolute;
+    margin-top:190px;
+    z-index:1;
+    @include displayflex;
+    @include size($w:100%);
+    span{
+      @include font($fw:600, $fm:'Montserrat', $fs:50px, $c:#0E0E0E, $ta:center);
+      @include size($w:90.77%,$mw:1200px); 
+      @include media($d:1200px, $fs:40px);
+      @include media($d:860px, $fs:25px);
+
+    }
+  }
+  
+  
+}
+
+

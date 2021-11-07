@@ -1,0 +1,86 @@
+@import "../formul";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+.Project{
+ .project1{
+   z-index:4;
+   position: absolute;
+  //  @include mp($m:220px 0px 0px 0px, $p:'');
+   @include size($w:100%,$h:auto,$mw:'',$mh:'');
+  //  border:1px solid red;
+  .title {
+    h1{
+      @include font( $fw:400, $fs: 60px, $fm: "Montserrat", $ta: center, $lh: 56px);
+      @include mp($m: 31px 0px 45px 0px);
+      @include media($d:900px, $m: 31px 0px 45px 0px);
+      // @include media($d:900px, $m: 31px 0px 45px 0px);
+    }
+  }
+  .active-pre-future{
+    @include displayflex($fd: row, $ai: center, $jc: center);
+    @include size($w: 100%, $mw:884px, $h: 63px);
+    @include media($d:900px, $w: 85%, $fs: 20px, $h: 40px);
+    @include mp($m: auto);
+    border: 1px solid #333333;
+    .active{
+      background-color: #2C2C2C;
+      color: #FFFFFF;
+    }
+    .active, .pre, .future{
+      @include size($w: 100%, $h: 63px);
+      @include mp($p: 7px);
+      @include font( $fw:500, $fs: 35px, $fm: "Montserrat", $ta: center);
+      @include media($d:900px, $w: 100%, $fs: 20px, $h: 40px);
+      border: 1px solid #333333;
+    }
+  }
+  .clear-height{
+    @include size($h: 33px);
+  }
+  .empty-div{
+    @include mp($m: auto);
+    @include size($w: 100%, $mw: 1240px, $h: 298px);
+    @include displayflex($fd: row, $ai: center, $jc: space-evenly);
+    @include media($d:1220px, $w: 820px,  $h: 250px);
+    @include media($d:860px, $w: 540px,  $h: 160px);
+    @include media($d:600px, $fd: column,  $w: 270px,  $h: 600px);
+
+    .empty-div-one, .empty-div-two, .empty-div-three{
+      @include size($w: 100%, $mw: 400px, $h: 298px);
+      @include media($d:1220px, $w: 260px,  $h: 250px);
+      @include media($d:860px, $w: 170px,  $h: 160px);
+      @include media($d:600px, $w: 270px,  $h: 190px);
+      background-color: #505050;
+    }
+  }
+  .end{
+    @include size($w: 100%, $mw: 1240px, $h: 150px);
+    @include mp($m: auto, $p: 33px 0px 0px 50px);
+    p{
+      @include font( $fw:500, $fs: 45px, $fm: "Montserrat", $ta: left, );
+       @include media($d:900px, $fs: 30px, $p: 0px 0px 0px 50px);
+       @include media($d:700px, $p: 0px 0px 0px 20px);
+    }
+    span{
+      display: block;
+      @include font( $fw:500, $fs: 25px, $fm: "Montserrat", $ta: left, );
+       @include media($d:900px, $fs: 18px, $p: 0px 0px 0px 50px);
+       @include media($d:700px, $p: 0px 0px 0px 20px);
+    }
+ }
+ }
+  .gif{
+     background-color: transparent; 
+    .img1 { 
+      @include size($h:100vh,$mh:668px);
+      mix-blend-mode: difference;     
+    }
+    .img2 {
+      @include size($h:100vh,$mh:300px);
+      mix-blend-mode: difference;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+

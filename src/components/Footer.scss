@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 .footer{
+
   @include size;
   background-color: #1B1B1B;
   background-blend-mode: multiply; 
@@ -19,8 +20,8 @@
     @include mp($p: 50px 50px 10px 50px);
     @include media($d:1000px, $fs:20px, $p: 40px);
     @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px, $h: 265px);
-    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 250px, $bb:1px solid #fff);
-
+    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 225px, $bb:1px solid #fff);
+    @include media($d:380px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 250px, $bb:1px solid #fff);
     .line-more{
       @include font($fs: 22px, $fm: "Montserrat", $ta: left, $lh: 69px);
       @include mp($m: -5px 0px 0px 0px);
@@ -43,12 +44,17 @@
       @include media($d:500px, $w:170px, $h:35px);
     }
     .right{
+      height: 40px;
       @include font($fs: 16px, $fm: "Montserrat", $ta: left,  $fw: 200);
       @include mp($m: 42px 0px 0px 0px);
       @include media($d:1000px, $fs:14px);
       @include media($d:750px, $fs:10px, $m: 30px 0px 0px 0px);
       @include media($d:500px, $fs:12px, $m: 0px 0px 0px 0px, $lh: 15px);
       display: block;
+      @media screen and (min-width: 1507px) {
+        margin-top: 70px;
+      }
+     
     }
   }
   .child-two{
@@ -59,7 +65,7 @@
     @include media($d:1000px, $fs:20px, $p: 40px);
     @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px);
     // @include media($d:500px, $fs:10px, $p: 15px, $lh: 20px);
-    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 160px, $bb:1px solid #fff);
+    @include media($d:500px, $fs:16px, $p: 10px 20px, $lh: 35px,$w:100%, $h: 130px, $bb:1px solid #fff);
     .facebook, .instagram, .linkedin {
       z-index: 5;
       &:hover{
@@ -77,7 +83,10 @@
     border-left: 1px solid #E0E0E0;
     @include media($d:1000px, $fs:20px, $p: 40px);
     @include media($d:750px, $fs:14px, $p: 20px, $lh: 29px, $h: 265px);
-    @include media($d:500px, $fs:16px, $p: 25px 20px, $lh: 35px,$w:100%, $h: 250px, $bb:1px solid #fff);
+    @include media($d:500px, $fs:16px, $p: 10px 20px, $lh: 35px,$w:100%, $h: 200px);
+    @media screen and (max-width: 500px) {
+      border-left: 0px;      
+      }
     .home-hov, .layiheler, .faq-hover{
       &:hover{
         @include font($fs: 22px, $fm: "Montserrat", $ta: left,  $lh: 49px, $fw:600); 
@@ -149,6 +158,8 @@
       @include media($d:750px, $fs:10px, $lh: 29px, $m: 135px 0px 0px 0px);
       @include media($d:500px, $fs:12px, $lh: 25px, $m: 80px 0px 0px 0px);
       @include mp($m: 205px 0px 0px 0px);
+
+      height: 40px;
     }
   }
 }

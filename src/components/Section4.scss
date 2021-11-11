@@ -7,14 +7,12 @@
   margin:150px 0px;
   @include media($d:600px, $m: 70px 0px);
   .div1{
-
     padding:0px 65px;
     @include size($w:80%,$h:306px,$mw:730px);
     background: #222222;
     @include displayflex($fd:column,$ai:flex-end,$jc:flex-start);
     @include media($d:910px, $p: 0px 30px);
     @include media($d:500px, $h:270px);
-    
   span{
      margin-top:45px;
      @include font($fw:500,$fm:'Montserrat',$fs:40px,$c:#fff,$ta:left);
@@ -22,6 +20,9 @@
      @include media($d:910px, $fs: 30px);
      @include media($d:500px, $fs: 20px, $m: 35px 0px 0px 0px);
   }
+  .form-action{
+    width: 100%;
+
   input{
     margin-top:30px;
     padding:0px 27px;
@@ -103,9 +104,11 @@
     display: block;
     position: relative;
     text-decoration: none;
-    margin: 25px 0px 0px -87px!important;   
+    margin-left: 200px;
+    margin: 25px 0px 0px 0px;   
     padding: auto;
-    @include media($d:500px, $w:170px, $h:35px, $m:0px auto, $fs: 14px, $p: auto, $lh:57px);
+    float: right;
+    @include media($d:500px, $w:170px, $h:35px, $m:30px auto, $fs: 14px, $p: auto, $lh:57px);
     @media(min-width: 600px) {     
       // margin: 0 1em 2em;
     }  
@@ -125,7 +128,6 @@
       left: 0;
       position: absolute;
       top: 0; 
-     
     }
     rect {
       fill: none;
@@ -146,6 +148,6 @@
       transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
     }
   }
-
+}
 }
 }

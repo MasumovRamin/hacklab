@@ -125,7 +125,7 @@ function Navbar() {
           </NavLink>
         </li>
         <li className="last-li">
-          <a href="/" class="btn btn-1">
+          <a href="https://f8twv0pnpma.typeform.com/hacklabuzvluk" target="_blank" class="btn btn-1">
             <svg>
               <rect x="0" y="0" fill="" width="100%" height="100%" />
             </svg>
